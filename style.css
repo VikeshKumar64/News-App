@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+--primary-text-color:#183b56;
+--secondary-text-color:#577592;
+--accent-color:#2294ed;
+--accent-color-dark:#1d69a3;
+    --background-color-light: #fff;
+    --text-color-light: #183b56;
+    --secondary-text-color-light: #577592;
+
+    --background-color-dark: #1f1f1f;
+    --text-color-dark: #fff;
+    --secondary-text-color-dark: #a7b6c2;
+
+    /* ... other variables ... */
+
+
+}
+
+
+body{
+    font-family: "Playfair Display", Arial, sans-serif;
+    color:var(--primary-text-color);
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a{
+   text-decoration: none; 
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    max-width:1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+body.dark-mode nav {
+    background-color: #0f0f0f; /* Change this to your desired dark mode background color */
+    /* ... other styles ... */
+}
+
+.main-nav{
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.company-logo img{
+    width: 80px; 
+    height: 80px;
+}
+
+.nav-links ul{
+    gap: 20px;
+}
+
+
+.hover-links {
+    cursor: pointer;
+}
+
+.hover-links:hover{
+    color:var(--secondary-text-color);
+}
+
+.hover-links:active{
+    color:purple;
+}
+
+.nav-items.active{
+    color: purple;
+}
+
+.search-bar{
+    height: 34px;
+    gap: 8px;
+}
+
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid #bbd0e2;
+}
+
+.search-button{
+    background-color:var(--accent-color);
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#ffff;
+    cursor: pointer;
+}
+
+.search-button:hover{
+    background-color: rgb(27, 100, 202);
+}
+
+main{
+    margin-top: 150px;
+    padding-block: 20px;
+}
+/* /////////////////////////////////////////////////////////////// */
+.card-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    opacity: 0.5;
+    transform: translateY(30px);
+    transition: 0.6s all ease-in-out;
+}
+.card-container-change{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+/* /////////////////////////////////////////////////////////////////// */
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #ffff;
+    overflow: hidden;
+    transition: all 0.3s ease ;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+} 
+
+
+.card:hover{
+    background-color: var(--background-color-light);
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.05); 
+}
+
+
+
+.card-header img{
+    width:100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 12px;
+}
+
+.news-source{
+    margin-block: 12px;
+}
+
+.fa-solid{
+    cursor: pointer;
+    color: var(--accent-color-dark);
+}
+
+body {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    /* ... other styles ... */
+}
+
+body.dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+}
+
+body.dark-mode p {
+    color: var(--secondary-text-color-dark);
+}
+
+
+/* Add these rules to your existing CSS */
+
+#top-button {
+    position: fixed;
+    bottom: 20px; /* Adjust this value to change the vertical position */
+    right: 20px; /* Adjust this value to change the horizontal position */
+}
+
+/* Style the button inside the #top-button */
+#top-button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color-dark);
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#top-button a:hover {
+    background-color: var(--accent-color);
+}
+
+
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 600px) {
+    /* Your responsive styles for extra small devices */
+  }
+  
+  /* Small Devices (Tablets) */
+  @media only screen and (min-width: 601px) and (max-width: 768px) {
+    /* Your responsive styles for small devices */
+  }
+  
+  /* Medium Devices (Laptops) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Your responsive styles for medium devices */
+  }
+  
+  /* Large Devices (Desktops) */
+  @media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    /* Your responsive styles for large devices */
+  }
+  
+  /* Extra Large Devices (Large Desktops or Wide Screens) */
+  @media only screen and (min-width: 1281px) {
+    /* Your responsive styles for extra large devices */
+  }
+
+  /* Media query for small screens */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the nav links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute;
+    top: 60px; /* Adjust as needed */
+    right: 0;
+    background-color: #f3faff;
+    width: 100%; /* Take full width */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the nav links when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the menu icon */
+  }
+}
+
+/* Rest of your existing CSS */
+ 
+/* Media query for small screens */
+@media only screen and (max-width: 768px) {
+    .company-logo,
+    .nav-links,
+    #home {
+      display: none; /* Hide the logo and all nav links on small screens */
+    }
+  
+    .menu-toggle {
+      display: block; /* Show the menu icon */
+    }
+  
+    .main-nav {
+      justify-content: flex-end; /* Adjust alignment of menu toggle */
+    }
+    /* Media query for small screens */
+@media only screen and (max-width: 768px) {
+    /* ... Other responsive styles ... */
+  
+    /* Adjust alignment of card container */
+    .card-container {
+      justify-content: center; /* Center the cards horizontally */
+      align-items: center; /* Center the cards vertically */
+    }
+  }
+  
+  
+    /* Adjust styles for search bar and button */
+    .search-bar {
+      width: auto; /* Allow the search bar to take the minimum required width */
+      margin-top: 20px; /* Add spacing from the menu toggle */
+      margin-left: 20px; /* Add margin to push the search bar more to the left */
+      display: flex; /* Align the input and button horizontally */
+      align-items: center; /* Align items vertically within the search bar */
+      flex: 1; /* Allow the search bar to take available horizontal space */
+    }
+  
+    .news-input {
+      margin-right: 8px; /* Add spacing between input and button */
+    }
+  
+    .search-button {
+      width: 80px; /* Set button width */
+    }
+  
+    /* Adjust positioning of the dark mode button */
+    #dark-mode-toggle {
+        padding: 20px 20px 0px 0px ;
+      margin-left: 10px; /* Adjust margin to position the dark mode button beside the search button */
+      display: flex; /* Align dark mode button with search button horizontally */
+      align-items: center; /* Align items vertically within the dark mode button */
+    }
+    
+    /* Rest of your responsive navigation CSS */
+  }
+  
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .card-container {
+      justify-content: center; /* Center the cards horizontally */
+    }
+    .search-bar {
+        justify-content: center; /* Center the contents horizontally */
+        margin-left: 0; /* Remove left margin to center search bar */
+      }
+      .search-button{
+        padding: 8px 19px;
+      }
+    
+      #dark-mode-toggle {
+        margin-right: 30px; /* Adjust margin to center the dark mode button */
+      }
+
+      .company-logo {
+        padding-left: 30px;
+        display: flex;
+        justify-content: center; /* Center the logo horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0; /* Remove margins for centered alignment */
+      }
+  }
+  
+
+
+/* Media query for screens around 540px width and 720px height */
+@media only screen and (max-width: 540px) and (max-height: 720px) {
+    .search-bar {
+      justify-content: center; /* Align search bar to the right */
+    }
+  
+    #dark-mode-toggle {
+      margin-left: 0; /* Remove left margin to center the dark mode button */
+    }
+    .company-logo {
+        display: flex;
+        justify-content: center; /* Center the logo horizontally */
+        align-items: center; /* Center vertically */
+        margin: 0; /* Remove margins for centered alignment */
+      }
+  }
+
+  /* Media query for screens around 375px width and 667px height */
+  
+  /* Adjust other styles as needed */
+  
+
+
+  @media only screen and (max-width: 540px) and (max-height: 740px) {
+    .company-logo {
+      display: block; /* Show the logo */
+    }
+    #dark-mode-toggle {
+        padding: 20px 20px 0px 0px ;
+      margin-left: 10px; /* Adjust margin to position the dark mode button beside the search button */
+      display: flex; /* Align dark mode button with search button horizontally */
+      align-items: center; /* Align items vertically within the dark mode button */
+    }
+    /* Adjust other styles as needed */
+  }
+
+  @media only screen and (max-width: 1080px) {
+    .card-container {
+      justify-content: center; /* Center align the cards */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  @media only screen and (max-width: 1024px) and (max-height: 741px) {
+    #dark-mode-toggle {
+        padding-right:50px /* Add margin-right to the dark mode button */
+    }
+  
+    /* Adjust other styles as needed */
+  }
+
+  @media only screen and (max-width: 360px) and (max-height: 740px) {
+    .search-bar {
+      flex-direction: row;
+      align-items: center;
+      /* justify-content: center; Center the contents horizontally */
+        margin-left: 0; /* Remove left margin to center search bar */
+    }
+    .news-input {
+      width: 50%; /* Adjust the width as needed */
+  }
+
+  #dark-mode-toggle {
+    display: flex;
+    justify-content: end;
+    padding-right:15px /* Add margin-right to the dark mode button */
+}
+  
+  .company-logo {
+    display:none; /* Hide the logo */
+  }
+
+  .search-button {
+    width:38%; /* Adjust the width as needed */
+    
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  padding-left: 10px;
+
+}
+}
+
+/* Media query for screens around 320px width and 588px height */
+@media only screen and (max-width: 320px) and (max-height: 588px) {
+  .search-bar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
+
+  }
+
+  .news-input {
+      width: 50%; /* Adjust the width as needed */
+  }
+
+  .search-button {
+      width:38%; /* Adjust the width as needed */
+      
+  }
+  .company-logo {
+    display:none; /* Hide the logo */
+  }
+
+  #dark-mode-toggle {
+    padding-right:15px /* Add margin-right to the dark mode button */
+}
+  /* Adjust other styles as needed */
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: -30px; 
+  left: 0;
+  width: 100%;
+  background-color: #212121;
+  text-align: center;
+  padding: 10px 0;
+  transition: transform 0.3s, color 0.3s, bottom 0.3s;
+  z-index: 1; 
+}
+
+footer:hover {
+  transform: translateY(-0.9px);
+  color: #999999;
+  bottom: 0; 
+}
+
+#developedBy {
+  font-size: 14px;
+  color: #999999;
+}
+
+
+
+
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  border: 6px solid rgba(0, 0, 0, 0.1); /* Increase border width */
+  border-left-color: #3498db;
+  border-radius: 50%;
+  width: 80px; /* Increase spinner width */
+  height: 80px; /* Increase spinner height */
+  animation: spin 0.7s linear infinite;
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
