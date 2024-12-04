@@ -28,7 +28,7 @@ Welcome to the News Website project! This project is a news aggregation site bui
 ## 🌐 API Used
 
 This application integrates with the following APIs to fetch real-time data:
-### Swiggy API
+### Gnews API
   - **News List**: Fetches a list of News with details such as name, date, etc.
     -Endpoint: `https://gnews.io/api/v4/search?q={API-KEY}`
 ###
